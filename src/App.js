@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
+import Navigation from "./components/navigation/Navigation";
+import Jumbotron from "./components/jumbotron/Jumbotron";
+import Skill from "./components/Skill";
+import Card from "./components/Card";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Fragment>
+            <div>
+                <Navigation />
+                <Jumbotron />
+                <button>Ubah</button>
+                <p>Hello World</p>
+                <p>Nama saya miftah</p>
+            </div>
+            <div>
+                <Skill />
+                <Card />
+            </div>
+        </Fragment>
+    );
 }
 
 export default App;
+
+// class component
+// 1. ada render
+// 2. bisa menggunakan state
+// 3. bisa membuat sebuah fungsi, arrow function, function namaFungsi()
+// 4. harus bind sebuah fungsi event handler, jika tidak menggunakan arrow function
+
+// function component
+// 1. tidak ada render
+// 2. bisa menggunakan hooks
+// 3. bisa membuat sebuah fungsi, function namaFungsi()
